@@ -913,11 +913,8 @@ class ARFCN:
              1020: {"band": "EGSM-900", "uplink": 889.2, "downlink": 934.2},
              1021: {"band": "EGSM-900", "uplink": 889.4, "downlink": 934.4},
              1022: {"band": "EGSM-900", "uplink": 889.6, "downlink": 934.6},
-             1023: {"band": "EGSM-900", "uplink": 889.8, "downlink": 934.8}} 
-        
-        
+             1023: {"band": "EGSM-900", "uplink": 889.8, "downlink": 934.8}}   
         #endregion
-       
         self.arfcn_by_uplink = self.__build_for_uplink()
         self.arfcn_by_downlink = self.__build_for_downlink()
         self.arfcn_for_band = self.__build_for_band()
