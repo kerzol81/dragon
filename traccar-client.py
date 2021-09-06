@@ -3,19 +3,14 @@ from quectel import Quectel
 import syslog
 import time
 
-ip = ''
-
-
 class TraccarClient:
     def __init__(self, device_id, server_ip , server_port) -> None:
         self.device_id = device_id
         self.server_ip = server_ip
         self.server_port = server_port
-        try:
-            self.q = Quectel()
-            self.__sendCurrentPostitionInOsmandFormat()
-        except Exception as e:
-            syslog.syslog(syslog.LOG_ERR, f'[+] Traccar-Client initialisation error: {e}')
+        
+        self.q = Quectel()
+        self.__sendCurrentPostitionInOsmandFormat()
     
     def __sendCurrentPostitionInOsmandFormat(self):             
         data = {   
@@ -39,6 +34,6 @@ if __name__ == '__main__':
     print('[+] Starting Traccar-Client service ...')
     rate = 60
     while True:
-        traccar = TraccarClient(device_id='Dragon01', server_ip=ip, server_port=5055)
+        traccar = TraccarClient(device_id='D01', server_ip='', server_port=5055)
         time.sleep(rate)
         traccar = None
