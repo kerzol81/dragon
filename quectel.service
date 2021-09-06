@@ -13,7 +13,7 @@ Environment=PYTHONUNBUFFERED=1
 Restart=on-failure
 
 # Our service will notify systemd once it is up and running
-Type=notify
+Type=simple
 
 [Install]
 # Tell systemd to automatically start this service when the system boots
