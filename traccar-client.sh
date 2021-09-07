@@ -1,6 +1,6 @@
 #!/bin/bash
 
-traccar_ip='172.30.30.100'
+traccar_ip='172.33.33.200'
 traccar_port='5055'
 id='pc001'
 lat='47.1'
